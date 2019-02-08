@@ -1,4 +1,159 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
 body {
   font-family: "Montserrat", roboto, sans-serif;
-  color: #cacaca;
+  color: #fff;
+}
+
+a {
+  transition: .2s ease;
+}
+
+/*/Font/Text/*/
+h1 {
+  font-size: 45px;
+}
+h2 {
+  font-size: 35px;
+}
+h3  {
+  font-size: 25px;
+}
+h4 {
+  font-size: 20px;
+  line-height: 30px
+}
+p {
+  font-size: 17px;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-left {
+  float: none;
+width: 100%;
+}
+.container-right {
+float: none;
+width: 100%;
+}
+
+.container-right img, .container-left img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .container-left {
+    float: left;
+  width: 50%;
+  }
+  .container-right {
+  float: right;
+  width: 50%;
+  }
+  .moduleGroup .module:nth-child(1) .container {
+    margin-top: 150px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.moduleGroup {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height:100%;
+}
+.module {
+  display: module;
+  margin: auto;
+}
+
+.moduleGroup .module {
+  scroll-snap-align: start;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+.moduleGroup .module:nth-child(1) {
+  background-image: linear-gradient(to left, azure , #a8fdff);
+  color: #F08080;
+}
+.moduleGroup .module:nth-child(2) {
+  background: azure;
+}
+.moduleGroup .module:nth-child(3) {
+  background: blanchedalmond;
+}
+.moduleGroup .module:nth-child(4) {
+  background: lightcoral;
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .moduleGroup .module:nth-child(1) .container-left h1 {
+    margin-top: 300px;
+  }
+}
+/*/Navbar/*/
+nav {
+  background: transparent;
+  display: block;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+}
+
+.navbar-brand{
+  color: #F08080;
+  font-family: 'Pacifico', roboto;
+    padding: 5px 0 0;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .2s; ease
+}
+.navbar-brand:hover {
+  color: #cecece;
+}
+
+.nav-left {
+  float: left;
+  width: 50%;
+}
+.nav-right{
+  float: right;
+  width: 50%;
+}
+.nav-right ul {
+float: right;
+}
+.nav-right ul li {
+  display: inline;
+  padding: 1px 5px;
+  text-align: center;
+}
+.nav-right a {
+  color: #F08080;
+  font-size: 20px;
+  text-decoration: none;
+}
+.nav-right a:hover {
+  color: #cecece;
 }
