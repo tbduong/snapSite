@@ -47,11 +47,27 @@ float: none;
 width: 100%;
 }
 
+.grid-block {
+  max-width: 790px;
+margin: auto;
+}
+
 .block-3 {
   display: inline-block;
   margin: 0 auto;
   width: 100%;
   background-color: #cecece;
+}
+
+.block-left {
+  display: grid;
+}
+.block-left img {
+  max-width: 30%;
+    height: auto;
+}
+.block-right {
+  display: grid;
 }
 
 
@@ -126,7 +142,9 @@ width: 100%;
 
 @media (max-width: 500px) {
   .moduleGroup .module:nth-child(1) .container-left h1 {
-    margin-top: 300px;
+    margin-top: 100px;
+    font-size: 30px;
+    text-align: center;
   }
 }
 /*/Navbar/*/
