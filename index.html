@@ -6,12 +6,15 @@
     <title>SnapSite</title>
     <link rel="icon" type="image/png" href="./images/td-logo.png">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Roboto+Condensed|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <!--slick slider-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <meta charset="utf-8">
     <title>Snap</title>
   </head>
   <body>
-    <nav>
+    <nav class="nav-desktop">
       <div class="container">
         <div class="nav-left">
           <div class="nav-logo">
@@ -32,17 +35,44 @@
           </ul>
         </div>
       </div>
+    </nav>
+    <nav class="nav-mobile">
+      <div class="container">
+        <div class="nav-left">
+          <a class="navbar-brand">td</a>
+        </div>
+        <div class="nav-right">
+
+        </div>
+      </div>
 
     </nav>
-    <div class="moduleGroup">
+    <div class="moduleGroup componentHero">
       <div class="module">
+        <!--Floating Squares-->
+          <ul class="squares">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+          </ul>
         <div class="container">
           <div class="container-left">
-            <h1>Sleek. User-Driven. Responsive. Design.</h1>
-            <h4>Front End Web Developer based in the San Francisco Bay Area with a passion to build user driven web applications to tell your story.</h4>
-          </div>
-          <div class="container-right">
-            <img src="images/monitor-vector.png" alt="">
+            <div class="text-wrapper">
+              <h1>Sleek. User-Driven. Responsive. Design.</h1>
+              <h4>Front End Developer based in the San Francisco Bay Area with a passion to build purposeful and creative design to tell your story.</h4>
+            </div>
           </div>
         </div>
 
@@ -59,28 +89,52 @@
             </div>
           </div>
           <div class="text-holder color-primary">
-            <p>I have always sought out opportunities and challenges that are meaningful to me. My professional and educational career has exposed me to many different fields and experiences, but I have never stopped engaging my passion to help others, to learn more, and to solve problems. My experiences have shaped me into a dynamic, process driven, and well-rounded developer and team player.</p>
+            <p>I have always sought out opportunities and challenges that are meaningful to me. My professional and educational career has exposed me to many different fields and experiences, but I have never stopped engaging my passion to help others, learn more, and solve problems. My experiences have shaped me into a dynamic, process driven, and well-rounded developer and team player.</p>
           </div>
 
         </div>
       </div>
       <div class="module">
         <div class="container">
+          <h2>Workflow.</h2>
           <div class="block-3">
-            <h3>1</h3>
+            <h3>Collaboration & Planning</h3>
+            <p>Collaborate closely with clients to brew up ideas, transform concepts into user flows and wireframes to bring their vision to life; the core for executing great user experiences and design.</p>
           </div>
           <div class="block-3">
-            <h3>1</h3>
+            <h3>Responsiveness & Design </h3>
+            <p>I believe in responsive and clean designs that provide intuitive user-experience while focusing on mobile-first design. I am a minimalist who believes that less is more.</p>
           </div>
           <div class="block-3">
-            <h3>1</h3>
+            <h3>Dynamic Development</h3>
+            <p>Strong background in data analysis and visual design chops from a variety of professional experiences has molded me into a process driven and well-rounded developer. I enjoy coding things from scratch, but I am also comfortable utilizing a variety of libraries and frameworks.</p>
           </div>
         </div>
       </div>
-      <div class="module mod-4">4</div>
+      <div class="module">
+        <div class="container">
+          <div class="block slider fade">
+              <div class="slide-item">
+                <a href="#">  <img src="images/responsive-arlo.png" alt=""></a>
+              </div>
+              <div class="slide-item">
+                <a href="#">  <img src="images/responsive-orbi.png" alt=""></a>
+              </div>
+              <div class="slide-item">
+                <a href="#">  <img src="images/responsive-wander.png" alt=""></a>
+              </div>
+          </div>
+          </div>
+        </div>
+      <div class="module mod-4">
+        <div class="container">
+          <h2>Other fun stuff.</h2>
+        </div>
+      </div>
     </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/main.js"></script>
   <script src="https://use.fontawesome.com/9a7529423b.js"></script>
 </html>
