@@ -34,6 +34,7 @@ a {
 .row {
   display: block;
   width: 100%;
+  display: flex;
 }
 .row-item.thumbnail {
   position: relative;
@@ -55,6 +56,18 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background: transparent;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: left;
 }
 
 .panel-left {
@@ -111,6 +124,7 @@ h4 {
 }
 p {
   font-size: 15px;
+  text-align: center;
 }
 }
 
@@ -126,7 +140,9 @@ p {
   float: none;
   width: 100%;
 }
-.container-right {float: none;/* width: 100%; */}
+.container-right {
+  float: none;
+}
 
 .grid-block {
   max-width: 790px;
@@ -169,8 +185,7 @@ margin: auto;
 @media (min-width: 768px) {
   .block-3 {
     text-align: center;
-    width: 28%;
-    margin: 0 auto;
+    width: 33%;
   }
   .container {
     width: 750px;
@@ -182,6 +197,9 @@ margin: auto;
   .container-right {
   float: right;
   width: 50%;
+  }
+  .hamburger {
+    display: none;
   }
   .moduleGroup {
     scroll-snap-type: y mandatory;
@@ -204,7 +222,6 @@ margin: auto;
     width: 1170px;
   }
 }
-
 .module {
   margin: auto;
 }
@@ -216,20 +233,41 @@ margin: auto;
   align-items: center;
   font-size: 4rem;
   /*   background: #000D2B; */
-  background-image: linear-gradient(to right, #181818 5%, #000D2B 70%);
+  background-image: linear-gradient(to right, #181818 5%, #004080 70%);
+  /*background-image: linear-gradient(to right, #181818 5%, #000D2B 70%);*/
 }
 .moduleGroup .module:nth-child(3) .block-3 {
   border-radius: 2px;
-  height: 400px;
   vertical-align: top;
-  padding: 15px 15px;
+  padding: 20px 10px;
   color: #fff;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
+  .module.hero {
+    padding: 150px 0 120px;
+  }
+}
+
+@media (max-width: 525px) {
   .moduleGroup .module:nth-child(1) .container-left h1 {
     font-size: 30px;
     text-align: center;
+    line-height: 40px;
+  }
+  .module.hero .text-wrapper {
+    text-align: center;
+  }
+  .module.hero h1,
+  .module.hero h2,
+  .module.hero h3,
+  .module.hero h4, {
+    text-align: center;
+  }
+  .row-item.thumbnail img {
+    max-width: 150px;
+    margin: 10px auto;
+    animation-name: none;
   }
 }
 
@@ -242,17 +280,20 @@ margin: auto;
   }
 /*/Navbar/*/
 .hamburger {
-  display: block;
-  position: absolute;
-  top: 10px;
-  height: 100%;
+  position: fixed;
+  top:0;
+  z-index: 999;
+  width: 100%;
+  background: #344055;
+  padding: 10px;
 }
 .hamburger:before {
+    cursor: pointer;
   font-family: 'FontAwesome';
   content:'\f0c9';
   z-index: 9999999;
   display: block;
-  font-size: 20px;
+  font-size: 25px;
 }
 nav {
   background: transparent;
@@ -355,6 +396,7 @@ nav.nav-mobile {
 }
 .contact ul li {
   list-style: none;
+  text-align: right;
 }
 .contact a {
   color: #fff;
@@ -368,23 +410,44 @@ nav.nav-mobile {
 }
 
 /*icons*/
-.icon:before {
+.icon:after {
   font-family: 'FontAwesome';
   color: #fff;
   font-size: 50px;
 }
-.contact .icon:before{
-  margin-right: 15px;
+.fa-adobe:after {
+  font-size:45px;
 }
-.email:before{
+.fa-bootstrap:after {
+  font-size:45px;
+}
+.contact .icon:after{
+  margin-left: 20px;
+}
+.email:after{
   content:'\f0e0';
   font-size: 43px;
 }
-.linkedin:before{
+.linkedin:after{
   content:'\f08c';
 }
-.github:before{
+.github:after{
   content:'\f092';
+}
+.html:after {
+  content:'\f13b';
+}
+.git:after {
+  content:'\f1d3';
+}
+.css:after {
+  content:'\f13c';
+}
+.js:after {
+  content:'\f1c9';
+}
+.sketch:after {
+  content:'\f7c6';
 }
 
 .text-holder {
@@ -398,7 +461,11 @@ nav.nav-mobile {
 }
 /*Background Block Colors*/
 .color-primary{
-  background:#F08080;
+  background:#8DDBE0;
+  /*rgba(141,219,224, 0.5)*/
+}
+.block-3.altColor {
+  background:rgba(141,219,224, 0.5);
 }
 .color-secondary{
   background:#a8fdff;
@@ -498,6 +565,18 @@ body{
 @media (max-width: 767px) {
   .squares {
     display: none;
+  }
+  .scrolldown-arrow{
+  display: flex !important;
+  font-size: 60px;
+  margin: 0 auto !important;
+  position: relative !important;
+  bottom: 0;
+}
+  .scrolldown-arrow:before {
+    display: flex !important;
+    margin: 100px auto 0 !important;
+    position: relative !important;
   }
 }
 
@@ -716,6 +795,14 @@ body{
     animation-delay: .2s;
     animation-duration: 10s;
     background: #fff;
+}
+.squares li:nth-child(25){
+    left: 77%;
+    width: 250px;
+    height: 250px;
+    animation-delay: 0s;
+    animation-duration: 60s;
+    background: rgba(255, 255, 255, .1);
 }
 
 /*Animations*/
